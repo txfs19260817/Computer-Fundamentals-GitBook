@@ -32,6 +32,8 @@ SELECT c FROM t WHERE c >= 10 and c <= 20 FOR UPDATE;
 (20, +∞)
 ```
 
+Record Locks防止别的事务修改或删除（UPDATE & DELETE），Gap Locks防止别的事务新增（INSERT），Record Locks和Gap Locks结合形成的的Next-Key Locks共同解决了可重复读级别在写数据时的幻读问题。
+
 ### 锁降级
 
 Next-Key Locks在以下情况会降级为Record Locks，即仅锁住索引本身，而不是范围：
@@ -39,8 +41,13 @@ Next-Key Locks在以下情况会降级为Record Locks，即仅锁住索引本身
 * 当查询的索引含有唯一属性时；
 * 隔离级别设置为读已提交（READ COMMITTED）。
 
+### Example
+
+![](../../.gitbook/assets/image%20%2827%29.png)
+
 ## Reference
 
 1. [https://www.cnblogs.com/huan30/p/12307503.html](https://www.cnblogs.com/huan30/p/12307503.html)
-2. [http://www.cyc2018.xyz/数据库/数据库系统原理.html\#六、next-key-locks](http://www.cyc2018.xyz/数据库/数据库系统原理.html#六、next-key-locks)
+2. [https://tech.meituan.com/2014/08/20/innodb-lock.html](https://tech.meituan.com/2014/08/20/innodb-lock.html)
+3. [http://www.cyc2018.xyz/数据库/数据库系统原理.html\#六、next-key-locks](http://www.cyc2018.xyz/数据库/数据库系统原理.html#六、next-key-locks)
 

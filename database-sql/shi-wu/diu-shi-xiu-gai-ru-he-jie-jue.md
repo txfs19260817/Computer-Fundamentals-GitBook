@@ -8,7 +8,7 @@ description: 丢失修改问题如何解决？
 
 ### 场景
 
-![](../../.gitbook/assets/image%20%2831%29.png)
+![](../../.gitbook/assets/image%20%2832%29.png)
 
 只要应用程序存在 read-modify-write 操作，并且可能存在多个这样的事务同时执行，就很容易出现更新丢失的现象：
 
