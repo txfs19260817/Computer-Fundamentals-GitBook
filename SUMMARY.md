@@ -38,6 +38,11 @@
 
 ## Database/SQL
 
+* [索引](database-sql/suo-yin/README.md)
+  * [索引的数据结构是什么？](database-sql/suo-yin/suo-yin-de-shu-ju-jie-gou-shi-shen-me.md)
+  * [最左匹配前缀原则是什么？](database-sql/suo-yin/zui-zuo-pi-pei-qian-zhui-yuan-ze-shi-shen-me.md)
+  * [什么是索引下推？](database-sql/suo-yin/shen-me-shi-suo-yin-xia-tui.md)
+  * [什么情况下索引会失效？](database-sql/suo-yin/shen-me-qing-kuang-xia-suo-yin-hui-shi-xiao.md)
 * [事务](database-sql/shi-wu/README.md)
   * [事务的四大特性\(ACID\)？](database-sql/shi-wu/shi-wu-de-si-da-te-xing-acid.md)
   * [并发一致性问题？](database-sql/shi-wu/bing-fa-yi-zhi-xing-wen-ti.md)
@@ -45,4 +50,12 @@
   * [丢失修改如何解决？](database-sql/shi-wu/diu-shi-xiu-gai-ru-he-jie-jue.md)
   * [MVCC是什么？](database-sql/shi-wu/mvcc-shi-shen-me.md)
   * [InnoDB的三种行锁是什么？](database-sql/shi-wu/innodb-de-san-zhong-hang-suo-shi-shen-me.md)
+* [性能](database-sql/xing-neng/README.md)
+  * [EXPLAIN关键字打印信息的含义？](database-sql/xing-neng/explain-guan-jian-zi-da-yin-xin-xi-de-han-yi.md)
+  * [如何切分表？](database-sql/xing-neng/ru-he-qie-fen-biao.md)
+* [复制](database-sql/fu-zhi/README.md)
+  * [主从复制的过程是什么？](database-sql/fu-zhi/zhu-cong-fu-zhi-de-guo-cheng-shi-shen-me.md)
+  * [读写分离如何实现？](database-sql/fu-zhi/du-xie-fen-li-ru-he-shi-xian.md)
+* [关系数据库设计](database-sql/guan-xi-shu-ju-ku-she-ji/README.md)
+  * [什么是三范式？](database-sql/guan-xi-shu-ju-ku-she-ji/shen-me-shi-san-fan-shi.md)
 
