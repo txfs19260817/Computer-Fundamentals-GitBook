@@ -63,3 +63,10 @@
 
 * [进程和线程的区别？](operating-system/jin-cheng-he-xian-cheng-de-qu-bie.md)
 
+## Redis
+
+* [缓存三大问题](redis/huan-cun-san-da-wen-ti/README.md)
+  * [缓存穿透如何解决？](redis/huan-cun-san-da-wen-ti/huan-cun-chuan-tou-ru-he-jie-jue.md)
+  * [缓存击穿如何解决？](redis/huan-cun-san-da-wen-ti/huan-cun-ji-chuan-ru-he-jie-jue.md)
+  * [缓存雪崩如何解决？](redis/huan-cun-san-da-wen-ti/huan-cun-xue-beng-ru-he-jie-jue.md)
+
