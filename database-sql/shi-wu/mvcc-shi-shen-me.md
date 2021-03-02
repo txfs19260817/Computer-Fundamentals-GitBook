@@ -16,7 +16,7 @@ description: MVCC是什么？它的过程是什么？
 
 ### Undo log
 
-![](../../.gitbook/assets/image%20%2833%29.png)
+![](../../.gitbook/assets/image%20%2834%29.png)
 
 MVCC 的多版本指多个版本的快照，快照存储在 Undo log中，该日志通过回滚指针 ROLL\_PTR 把一个数据行的所有快照连接起来（图中的U）。如图中的V1和V2版本并非真实存在，而是通过当前V3和Undo log计算出来的。
 
@@ -24,7 +24,7 @@ MVCC 的多版本指多个版本的快照，快照存储在 Undo log中，该日
 
 ReadView 结构主要包含了当前系统未提交的事务列表 TRX\_IDs {TRX\_ID\_1, TRX\_ID\_2, ...}，还有该列表的最小值 TRX\_ID\_MIN 和 TRX\_ID\_MAX。
 
-![](../../.gitbook/assets/image%20%2830%29.png)
+![](../../.gitbook/assets/image%20%2831%29.png)
 
 进行 SELECT 操作时，根据数据行快照的 TRX\_ID 与 TRX\_ID\_MIN 和 TRX\_ID\_MAX 之间的关系，从而判断数据行快照是否可以使用：
 

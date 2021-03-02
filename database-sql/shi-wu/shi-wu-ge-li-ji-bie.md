@@ -6,7 +6,7 @@ description: 事务隔离级别都有哪些？
 
 ## 事务隔离级别
 
-![](../../.gitbook/assets/image%20%2828%29.png)
+![](../../.gitbook/assets/image%20%2829%29.png)
 
 ### 读未提交（READ UNCOMMITTED）
 
@@ -16,7 +16,7 @@ description: 事务隔离级别都有哪些？
 
 ### 读已提交（READ COMMITTED）
 
-![](../../.gitbook/assets/image%20%2829%29.png)
+![](../../.gitbook/assets/image%20%2830%29.png)
 
 一个事务只能读取已经提交的事务所做的修改。换句话说，一个事务所做的修改在提交之前对其它事务是不可见的。
 
@@ -29,7 +29,7 @@ description: 事务隔离级别都有哪些？
 
 导致的问题：不可重复读。见下图。
 
-![&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;](../../.gitbook/assets/image%20%2832%29.png)
+![&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;](../../.gitbook/assets/image%20%2833%29.png)
 
 ### 可重复读（REPEATABLE READ）
 
