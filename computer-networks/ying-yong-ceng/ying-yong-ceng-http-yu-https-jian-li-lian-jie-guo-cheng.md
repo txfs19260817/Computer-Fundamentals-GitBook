@@ -14,8 +14,8 @@ description: HTTP 与 HTTPs 的工作方式/建立连接过程分别是什么？
 
 ![](../../.gitbook/assets/image%20%284%29.png)
 
-1. \[Client Hello\] 客户端向服务器发起一个TCP连接（443端口），发送的信息主要包括自身所支持的TLS版本和加密算法列表（cipher suite）等；
-2. \[Server Hello\] 服务器选择一种支持的SSL版本和加密算法，然后将它和其它信息发送给客户端；
+1. \[Client Hello\] 客户端向服务器发起一个TCP连接（443端口），发送的信息主要包括自身所支持的TLS版本和加密算法列表（cipher suite），以及称为“客户端随机数”的一串随机字节等；
+2. \[Server Hello\] 服务器选择一种支持的SSL版本和加密算法，并将“服务器随机数”发送给客户端；
 3. \[Certificate\] 服务器向客户端发送一个包含数字证书的报文，该数字证书中包含证书的颁发机构、过期时间等信息，证书还附上了服务端的公钥；
 4. \[Server Hello Done\] 最后服务端发送一个完成报文通知客户端SSL的第一阶段已经协商完成。
 5. \[Client Key Exchange\] SSL第一次协商完成后，客户端发送一个回应报文，其中包含一个客户端生成的并经服务器公钥加密过的随机密码串，称为Pre-master secret；
@@ -33,5 +33,6 @@ description: HTTP 与 HTTPs 的工作方式/建立连接过程分别是什么？
 
 1. 《图解HTTP》
 2. 《HTTP权威指南》
-3. [https://dev.to/techschoolguru/a-complete-overview-of-ssl-tls-and-its-cryptographic-system-36pd](https://dev.to/techschoolguru/a-complete-overview-of-ssl-tls-and-its-cryptographic-system-36pd)
+3. [https://www.cloudflare.com/zh-cn/learning/ssl/what-happens-in-a-tls-handshake/](https://www.cloudflare.com/zh-cn/learning/ssl/what-happens-in-a-tls-handshake/)
+4. [https://dev.to/techschoolguru/a-complete-overview-of-ssl-tls-and-its-cryptographic-system-36pd](https://dev.to/techschoolguru/a-complete-overview-of-ssl-tls-and-its-cryptographic-system-36pd)
 
