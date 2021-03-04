@@ -43,6 +43,7 @@
   * [最左匹配前缀原则是什么？](database-sql/suo-yin/zui-zuo-pi-pei-qian-zhui-yuan-ze-shi-shen-me.md)
   * [什么是索引下推？](database-sql/suo-yin/shen-me-shi-suo-yin-xia-tui.md)
   * [什么情况下索引会失效？](database-sql/suo-yin/shen-me-qing-kuang-xia-suo-yin-hui-shi-xiao.md)
+  * [什么时候没必要用索引？](database-sql/suo-yin/shen-me-shi-hou-mei-bi-yao-yong-suo-yin.md)
 * [事务](database-sql/shi-wu/README.md)
   * [事务的四大特性\(ACID\)？](database-sql/shi-wu/shi-wu-de-si-da-te-xing-acid.md)
   * [并发一致性问题？](database-sql/shi-wu/bing-fa-yi-zhi-xing-wen-ti.md)
