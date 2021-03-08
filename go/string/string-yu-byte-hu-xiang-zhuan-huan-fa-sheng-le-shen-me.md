@@ -6,7 +6,7 @@ description: 'String与[]byte互相转换的过程发生了什么？'
 
 ## String与\[\]byte互转
 
-![](../../.gitbook/assets/image%20%2868%29.png)
+![](../../.gitbook/assets/image%20%2869%29.png)
 
 以`[]byte`转换成`string`为例：
 
