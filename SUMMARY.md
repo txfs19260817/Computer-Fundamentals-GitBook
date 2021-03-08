@@ -87,4 +87,10 @@
   * [Map的数据结构？](go/map/map-de-shu-ju-jie-gou.md)
   * [Map如何扩容？](go/map/map-ru-he-kuo-rong.md)
   * [Map的增删改查？](go/map/map-de-zeng-shan-gai-cha.md)
+* [String](go/string/README.md)
+  * [String数据结构？](go/string/string-shu-ju-jie-gou.md)
+  * [String与\[\]byte互相转换发生了什么？](go/string/string-yu-byte-hu-xiang-zhuan-huan-fa-sheng-le-shen-me.md)
+* [其他](go/qi-ta/README.md)
+  * [iota的实质是什么？](go/qi-ta/iota-de-shi-zhi-shi-shen-me.md)
+  * [Struct中Tag的实质是什么？](go/qi-ta/struct-zhong-tag-de-shi-zhi-shi-shen-me.md)
 
