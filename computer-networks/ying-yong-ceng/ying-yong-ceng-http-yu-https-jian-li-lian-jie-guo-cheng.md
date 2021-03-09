@@ -18,13 +18,13 @@ description: HTTP 与 HTTPs 的工作方式/建立连接过程分别是什么？
 2. \[Server Hello\] 服务器选择一种支持的SSL版本和加密算法，并将“服务器随机数”发送给客户端；
 3. \[Certificate\] 服务器向客户端发送一个包含数字证书的报文，该数字证书中包含证书的颁发机构、过期时间等信息，证书还附上了服务端的公钥；
 4. \[Server Hello Done\] 最后服务端发送一个完成报文通知客户端SSL的第一阶段已经协商完成。
-5. \[Client Key Exchange\] SSL第一次协商完成后，客户端发送一个回应报文，其中包含一个客户端生成的并经服务器公钥加密过的随机密码串，称为Pre-master secret；
-6. \[Change Cipher Spec\] 客户端发送一个报文提示服务器此后的报文采用Pre-master secret加密；
+5. \[Client Key Exchange\] SSL第一次协商完成后，客户端发送一个回应报文，其中包含一个客户端生成的并经服务器公钥加密过的随机密码串，称为pre-master secret；
+6. \[Change Cipher Spec\] 客户端发送一个报文提示服务器此后的报文采用pre-master secret加密；
 7. \[Finished\] 客户端发送一个finish报文，包含自第一次握手至今所有报文的整体校验值，最终协商是否完成取决于服务端能否成功解密；
 8. \[Change Cipher Spec\] 服务器同样发送Change Cipher Spec报文，向客户端确认；
-9. \[Finished\] 服务器同样发送finish报文，告诉客户端自己能正确解密报文。至此SSL连接建立完成；
-10. \[Request\] 客户端发送Pre-master secret加密的HTTP请求；
-11. \[Response\] 服务器返回Pre-master secret加密的HTTP响应；
+9. \[Finished\] 服务器同样发送finish报文，告诉客户端自己能正确解密报文。至此SSL连接建立完成，此时双方已经拥有根据pre-master secret和客户端与服务器的随机数计算得到的master secret；
+10. \[Request\] 客户端发送master secret加密的HTTP请求；
+11. \[Response\] 服务器返回master secret加密的HTTP响应；
 12. \[Close Notify\] 客户端断开连接时，发送 close\_notify 报文。这步之后再发送TCP FIN报文来关闭TCP连接。
 
 ![](../../.gitbook/assets/image%20%2823%29.png)
