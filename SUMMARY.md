@@ -64,6 +64,7 @@
 ## Operating System
 
 * [什么是fork函数？](operating-system/shen-me-shi-fork-han-shu.md)
+* [死锁的四个必要条件？](operating-system/si-suo-de-si-ge-bi-yao-tiao-jian.md)
 * [进程和线程的区别？](operating-system/jin-cheng-he-xian-cheng-de-qu-bie.md)
 
 ## Redis

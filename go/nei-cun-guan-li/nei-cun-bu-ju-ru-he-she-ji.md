@@ -12,9 +12,9 @@ description: Go的内存布局如何设计？
 
 * `spans` 区域存储了指向内存管理单元 `mspan` 的指针，每个内存单元会管理几页的内存空间，每页8KB；
 * `bitmap` 用于标识 `arena` 区域中的那些地址保存了对象，位图中的每个字节都会表示堆区中的 32 字节是否包含空闲，主要用于GC；
-* `arena` 区域是真正的堆区，划分为每页8KB，这些内存页中存储了所有在堆上初始化的对象；
+* `arena` 区域是真正的堆区，划分为每页8KB，这些内存页中存储了所有在堆上初始化的对象。
 
-![](../../.gitbook/assets/image%20%2875%29.png)
+![](../../.gitbook/assets/image%20%2876%29.png)
 
 从1.11起改用稀疏内存方案。这解决了申请大块的内存空间而不使用、移除堆大小的上限和C 和 Go 混合使用时的地址空间冲突等问题。
 
@@ -32,7 +32,7 @@ type heapArena struct {
 
 每个`heapArena`单元都会管理 64MB 的内存空间。
 
-![&#x603B;&#x89C8;](../../.gitbook/assets/image%20%2877%29.png)
+![&#x603B;&#x89C8;](../../.gitbook/assets/image%20%2879%29.png)
 
 ## Reference
 
