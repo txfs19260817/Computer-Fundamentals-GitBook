@@ -8,6 +8,33 @@ description: Map的增删改查如何实现？
 
 ### 查找
 
+```go
+func mapaccess1(t *maptype, h *hmap, key unsafe.Pointer) unsafe.Pointer {
+	alg := t.key.alg
+	hash := alg.hash(key, uintptr(h.hash0))
+	m := bucketMask(h.B)
+	b := (*bmap)(add(h.buckets, (hash&m)*uintptr(t.bucketsize)))
+	top := tophash(hash)
+bucketloop:
+	for ; b != nil; b = b.overflow(t) {
+		for i := uintptr(0); i < bucketCnt; i++ {
+			if b.tophash[i] != top {
+				if b.tophash[i] == emptyRest {
+					break bucketloop
+				}
+				continue
+			}
+			k := add(unsafe.Pointer(b), dataOffset+i*uintptr(t.keysize))
+			if alg.equal(key, k) {
+				v := add(unsafe.Pointer(b), dataOffset+bucketCnt*uintptr(t.keysize)+i*uintptr(t.valuesize))
+				return v
+			}
+		}
+	}
+	return unsafe.Pointer(&zeroVal[0])
+}
+```
+
 1. 根据key计算对应hash值；
 2. 取hash值低位与`hmap.B`取模确定bucket位置；
 3. 取hash值高8位，遍历`tophash`并比较，若找到则得到该`tophash`的下标`i`；
