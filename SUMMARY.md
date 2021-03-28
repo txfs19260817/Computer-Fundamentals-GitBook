@@ -68,6 +68,10 @@
 * [进程和线程的区别？](operating-system/jin-cheng-he-xian-cheng-de-qu-bie.md)
 * [为什么区分内核态和用户态？](operating-system/wei-shen-me-qu-fen-nei-he-tai-he-yong-hu-tai.md)
 
+## Linux
+
+* [当系统物理内存不够用时会怎样？](linux/dang-xi-tong-wu-li-nei-cun-bu-gou-yong-shi-hui-zen-yang.md)
+
 ## Redis
 
 * [缓存三大问题](redis/huan-cun-san-da-wen-ti/README.md)
