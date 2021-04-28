@@ -103,6 +103,7 @@
   * [Goroutine的调度策略？](go/goroutine/goroutine-de-tiao-du-ce-lve.md)
 * [内存管理](go/nei-cun-guan-li/README.md)
   * [内存布局如何设计？](go/nei-cun-guan-li/nei-cun-bu-ju-ru-he-she-ji.md)
+  * [GC过程？](go/nei-cun-guan-li/gc-guo-cheng.md)
 * [其他](go/qi-ta/README.md)
   * [iota的实质是什么？](go/qi-ta/iota-de-shi-zhi-shi-shen-me.md)
   * [Struct中Tag的实质是什么？](go/qi-ta/struct-zhong-tag-de-shi-zhi-shi-shen-me.md)
